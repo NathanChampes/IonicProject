@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      David CACA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">David CACA</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label>Déposer des musiques</ion-label>
+    <input type="file" accept="audio/*" (change)="onFileSelected($event)" />
+  </ion-item>
+
+  <ion-button (click)="toggleLampe()">Allume la lumière</ion-button>
+
+  <div id="visualizer" [ngStyle]="{'background-color': backgroundColor}"></div>
+
+  <canvas #frequencyCanvas></canvas>
+</ion-content>

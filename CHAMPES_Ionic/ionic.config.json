@@ -1,0 +1,7 @@
+{
+  "name": "CHAMPES_Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
