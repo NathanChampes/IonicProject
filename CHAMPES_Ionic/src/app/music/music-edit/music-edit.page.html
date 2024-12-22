@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Modifier Musique</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="updateMusic()" class="music-form">
+    <ion-item>
+      <ion-label position="floating">Titre</ion-label>
+      <ion-input [(ngModel)]="music.title" name="title" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Artiste</ion-label>
+      <ion-input [(ngModel)]="music.artist" name="artist" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Album</ion-label>
+      <ion-input [(ngModel)]="music.album" name="album" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Durée (en secondes)</ion-label>
+      <ion-input type="number" [(ngModel)]="music.duration" name="duration" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Genre</ion-label>
+      <ion-input [(ngModel)]="music.genre" name="genre" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Année</ion-label>
+      <ion-input type="number" [(ngModel)]="music.year" name="year" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Numéro de piste</ion-label>
+      <ion-input type="number" [(ngModel)]="music.trackNumber" name="trackNumber" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">URL de la pochette</ion-label>
+      <ion-input [(ngModel)]="music.coverArtUrl" name="coverArtUrl" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Mettre à jour</ion-button>
+  </form>
+</ion-content>

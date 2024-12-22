@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Liste de vos musiques
+    </ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleEditMode()">
+        <ion-icon slot="icon-only" [name]="editMode ? 'close-outline' : 'create-outline'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let music of musicList" >
+      <ion-label (click)="selectMusic(music)">
+        <h2>{{ music.title }}</h2>
+        <p>Artiste: {{ music.artist }}</p>
+        <p>Album: {{ music.album }}</p>
+        <p>Durée: {{ formatTime(music.duration) }}</p>
+        <p>Genre: {{ music.genre }}</p>
+        <p>Année: {{ music.year }}</p>
+      </ion-label>
+      <ion-buttons slot="end" *ngIf="editMode">
+        <ion-button (click)="editMusic(music)">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deleteMusic(music)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="add">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

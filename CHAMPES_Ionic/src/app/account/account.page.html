@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mon Compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="account-content">
+  <div *ngIf="user" class="user-info">
+    <h2>{{ user.displayName || 'Utilisateur' }}</h2>
+    <p>Email : {{ user.email }}</p>
+    <ion-button expand="full" (click)="logout()">Se déconnecter</ion-button>
+  </div>
+  <div *ngIf="!user" class="not-logged-in">
+    <p>Vous n'êtes pas connecté.</p>
+    <ion-button expand="full" routerLink="/login">Se connecter</ion-button>
+  </div>
+</ion-content>

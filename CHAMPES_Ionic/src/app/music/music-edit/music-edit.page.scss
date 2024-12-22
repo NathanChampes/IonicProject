@@ -1,0 +1,71 @@
+:host {
+  --background: #121212;
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+  --ion-color-primary: #bb86fc;
+  --ion-color-secondary: #03dac6;
+  --ion-color-tertiary: #03dac6;
+}
+
+ion-header {
+  --background: #1f1f1f;
+  --color: #ffffff;
+}
+
+ion-toolbar {
+  --background: #1f1f1f;
+  --color: #ffffff;
+}
+
+ion-title {
+  color: #ffffff;
+}
+
+ion-content {
+  --background: #121212;
+  color: #ffffff;
+}
+
+.music-form {
+  padding: 20px;
+}
+
+ion-item {
+  --background: #1f1f1f;
+  --color: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+ion-label {
+  color: #bb86fc;
+}
+
+ion-input {
+  --color: #ffffff;
+}
+
+ion-button.submit-button {
+  --background: #bb86fc;
+  --color: #ffffff;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  color: #ffffff;
+}
+
+ion-item[lines="none"] {
+  --background: transparent;
+}
+
+ion-label[slot="start"] {
+  color: #ffffff;
+}
+
+ion-progress-bar {
+  --progress-background: #bb86fc;
+  --background: #3a3a3a;
+  width: 100%;
+  margin: 0 10px;
+}

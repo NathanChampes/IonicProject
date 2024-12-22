@@ -1,0 +1,42 @@
+:host {
+    --background: #121212;
+    --ion-background-color: #121212;
+    --ion-text-color: #ffffff;
+    --ion-color-primary: #bb86fc;
+    --ion-color-secondary: #03dac6;
+    --ion-color-tertiary: #03dac6;
+  }
+  
+  ion-header {
+    --background: #1f1f1f;
+    --color: #ffffff;
+  }
+  
+  ion-toolbar {
+    --background: #1f1f1f;
+    --color: #ffffff;
+  }
+  
+  ion-title {
+    color: #ffffff;
+  }
+  
+  ion-content {
+    --background: #121212;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup-link p {
+    color: #ffffff;
+  }
+  
+  .signup-link a {
+    color: #bb86fc;
+    text-decoration: none;
+  }

@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DJ Set
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="visualizer" [ngStyle]="{'background-color': backgroundColor}"></div>
+
+  <div *ngIf="selectedMusic" class="music-info">
+    <img *ngIf="selectedMusic.coverArtUrl" [src]="selectedMusic.coverArtUrl" alt="Album cover" class="album-cover">
+    <h2>{{ selectedMusic.title }}</h2>
+    <p>Artiste: {{ selectedMusic.artist }}</p>
+  </div>
+
+  <div class="floating-progress-container" *ngIf="selectedMusic">
+    <div class="progress-container">
+      <div class="progress-bar" [style.width.%]="(currentTime / selectedMusic.duration) * 100"></div>
+    </div>
+    <p class="progress-time">{{ formatTime(currentTime) }} / {{ formatTime(selectedMusic.duration) }}</p>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" *ngIf="!isPlaying && selectedMusic">
+    <ion-fab-button (click)="resumeMusic()" *ngIf="!isNew">
+      <ion-icon name="play"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button (click)="playSelectedMusic()" *ngIf="isNew">
+      <ion-icon name="play"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" *ngIf="isPlaying && selectedMusic">
+    <ion-fab-button (click)="pauseMusic()">
+      <ion-icon name="pause"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

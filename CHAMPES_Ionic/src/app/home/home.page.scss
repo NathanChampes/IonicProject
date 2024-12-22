@@ -1,34 +1,66 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-#visualizer {
-  width: 100%;
-  height: 200px;
-  margin-top: 20px;
-  transition: background-color 0.5s;
-}
+:host {
+    --background: #121212;
+    --ion-background-color: #121212;
+    --ion-text-color: #ffffff;
+    --ion-color-primary: #bb86fc;
+    --ion-color-secondary: #03dac6;
+    --ion-color-tertiary: #03dac6;
+  }
+  
+  ion-header {
+    --background: #1f1f1f;
+    --color: #ffffff;
+  }
+  
+  ion-toolbar {
+    --background: #1f1f1f;
+    --color: #ffffff;
+  }
+  
+  ion-title {
+    color: #ffffff;
+  }
+  
+  ion-content {
+    --background: #121212;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .home-content {
+    text-align: center;
+  }
+  
+  .welcome-message {
+    margin-bottom: 40px;
+  }
+  
+  .welcome-message h1 {
+    font-size: 2.5em;
+    color: #bb86fc;
+  }
+  
+  .welcome-message p {
+    font-size: 1.2em;
+    color: #ffffff;
+  }
+  
+  ion-card {
+    --background: #1f1f1f;
+    --color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  ion-card:hover {
+    transform: scale(1.05);
+  }
+  
+  ion-card-title {
+    color: #bb86fc;
+  }
+  
+  ion-card-content {
+    color: #ffffff;
+  }

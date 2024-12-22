@@ -1,0 +1,34 @@
+ion-label {
+  --border-color: #ccc;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+ion-label:hover {
+  background-color: #282828;
+  cursor: pointer;
+}
+
+ion-label h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-label p {
+  font-size: 16px;
+  color: #666;
+}
+
+ion-buttons {
+  display: flex;
+  align-items: center;
+}
+
+ion-button {
+  margin-left: 10px;
+}
+
+ion-fab-button {
+  --background: #bb86fc;
+}

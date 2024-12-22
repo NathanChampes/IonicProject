@@ -1,0 +1,22 @@
+ion-tabs {
+    --ion-tab-bar-background: #1f1f1f;
+    --ion-tab-bar-color: #ffffff;
+    --ion-tab-bar-color-selected: #bb86fc;
+  }
+  
+  ion-tab-bar {
+    background-color: var(--ion-tab-bar-background);
+    color: var(--ion-tab-bar-color);
+  }
+  
+  ion-tab-button {
+    --color-selected: var(--ion-tab-bar-color-selected);
+  }
+  
+  ion-tab-button[aria-selected="true"] {
+    color: var(--color-selected);
+  }
+  
+  ion-icon {
+    color: inherit;
+  }

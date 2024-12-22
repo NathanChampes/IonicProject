@@ -1,0 +1,69 @@
+:host {
+  --background: #121212;
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+  --ion-color-primary: #bb86fc;
+  --ion-color-secondary: #03dac6;
+  --ion-color-tertiary: #03dac6;
+}
+
+ion-header {
+  --background: #1f1f1f;
+  --color: #ffffff;
+}
+
+ion-toolbar {
+  --background: #1f1f1f;
+  --color: #ffffff;
+}
+
+ion-title {
+  color: #ffffff;
+}
+
+ion-content {
+  --background: #121212;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.account-content {
+  text-align: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ion-avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+ion-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+h2 {
+  color: #bb86fc;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.not-logged-in {
+  text-align: center;
+}
+
+ion-button {
+  --background: #bb86fc;
+  --color: #ffffff;
+}
